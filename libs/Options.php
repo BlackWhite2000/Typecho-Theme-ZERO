@@ -1,7 +1,7 @@
 <?php
 function themeConfig($form) {
 	$ver = themeVersion();
-    $themeDir = "/usr/themes/ZERO/";
+        $themeDir = "/usr/themes/ZERO/";
 	echo '<div class="ZERO">
 	<h1 style="margin: 1em 0px -0.4em 0;">ZERO 主题设置面板</h1>
 	<p>欢迎使用 ZERO 主题，目前版本是：'. $ver .' <br>
