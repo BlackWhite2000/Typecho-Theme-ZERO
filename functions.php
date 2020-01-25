@@ -63,6 +63,15 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 
 }
 
+/**
+ * 获取主题版本号
+ */
+function themeVersion() {
+    $info = Typecho_Plugin::parseInfo(__DIR__ . '/index.php');
+    return $info['version'];
+}
+
+
 /** 输出文章缩略图 */
 function thumb($obj) {
 $rand_num = 20; //根据我们随机图片文件夹中的图片数量
