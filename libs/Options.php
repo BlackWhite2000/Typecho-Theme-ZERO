@@ -1,9 +1,10 @@
 <?php
 function themeConfig($form) {
-	
+	$ver = themeVersion();
+    $themeDir = "/usr/themes/ZERO/";
 	echo '<div class="ZERO">
 	<h1 style="margin: 1em 0px -0.4em 0;">ZERO 主题设置面板</h1>
-	<p>欢迎使用 ZERO 主题，目前版本是：1.0.0 <br>
+	<p>欢迎使用 ZERO 主题，目前版本是：'. $ver .' <br>
 	作者博客：<a href="https://www.bwxyz.top"  target="_blank">BlackWhite</a> | 帮助文档：<a href="https://github.com/BlackWhite2000/Typecho-Theme-ZERO"  target="_blank">Github</a> | 问题反馈：<a href="https://www.bwxyz.top/posts/32"  target="_blank">Blog</a>
 	</p>
 	</div>';
