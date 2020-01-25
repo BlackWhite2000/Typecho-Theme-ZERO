@@ -6,7 +6,7 @@
  * 
  * @package     Typecho-Theme-ZERO
  * @author      BlackWhite
- * @version     1.0.0
+ * @version     1.0.1
  * @link        https://www.bwxyz.top
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
