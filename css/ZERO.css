@@ -771,6 +771,7 @@ box-shadow: 10px -10px 40px -15px #000 inset, -10px -10px 40px -15px #000 inset;
 .post img:hover{opacity:1;}
 .contents-wrap{max-width:1000px;margin:0 auto;}
 .full p,.full li{line-height: 24px;letter-spacing: 1px; word-wrap: break-word;}
+.full p{line-height: 30px;letter-spacing: 2px}
 .caption{text-align: center;
     margin: 0 0 40px 0;
     font-size: 17px;}
