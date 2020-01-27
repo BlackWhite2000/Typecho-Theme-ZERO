@@ -11,7 +11,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                <?php $this->options->footerleft(); ?>
                 </section>
                 <section class="footer-float-right footer-align-center">
-                    <p>Powered by <a href="https://typecho.org/" target="_blank">Typecho</a> • <a href="https://www.bwxyz.top" target=_self>Theme ZERO</a></p>
+                    <p>Powered by <a href="https://typecho.org/" target="_blank">Typecho</a> • <a href="https://www.bwxyz.top/posts/32" target="_blank">Theme ZERO</a></p>
                     <?php $this->options->footerright(); ?>
                     <p><?php echo $setting['footer']; ?></p>
                 </section>
