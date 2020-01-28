@@ -86,9 +86,8 @@ $this->need('includes/header.php');
    
    
                 <div class="pages">
-                <?php $this->pageLink('上一页'); ?> &nbsp;&nbsp;
-                第<?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>页 &nbsp;&nbsp;
-                总<?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>页 &nbsp;&nbsp;
+                <?php $this->pageLink('上一页'); ?> &nbsp;
+                <?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>&nbsp;/&nbsp;<?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>&nbsp;
                 <?php $this->pageLink('下一页','next'); ?></div>
             </div>
             
