@@ -804,7 +804,7 @@ code {
 ==============   版权   ===============
 ============================================**/
 .copyright blockquote{border-left: 5px solid #2bf!important;}
-.copyright{padding-top:20px;}
+.copyright{padding-top:20px;word-wrap:break-word;}
 
 /**=========================================
 ==============   底部   ===============
