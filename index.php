@@ -71,7 +71,7 @@ $this->need('includes/header.php');
 
   <div class="bw-over-text">
   <div class="posts-author posts-date"><i class="fa fa-user"></i> <?php $this->author(); ?>&nbsp  <i class="fa fa-hourglass-2"></i> <?php $this->date('Y/m/d'); ?></div>
-  <span class="posts-title">  <?php $this->title(); ?></span>
+  <span class="posts-title">  <?php $this->sticky(); $this->title() ?></span>
   <p class="posts-text"><?php if (($this->fields->excerpt) == ''): ?>
 <?php $this->excerpt(40, '...'); ?>
 <?php else: ?>
