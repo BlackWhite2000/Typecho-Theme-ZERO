@@ -22,7 +22,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <!--引入jquery.js-->
 <script src="<?php Utils::indexTheme('js/jquery-3.4.1.min.js'); ?>"></script>
 <!--引入js-->
-<script src="<?php Utils::indexTheme('js/ZERO.js?v=1.0.0'); ?>"></script>
+<?php $ver = themeVersion(); ?>
+<script src="<?php Utils::indexTheme('js/ZERO.js?v='. $ver .''); ?>"></script>
 <!--引入clipboard、prism.js-->
 <script src="<?php Utils::indexTheme('js/clipboard.min.js'); ?>"></script>
 <script src="<?php Utils::indexTheme('js/prism.js'); ?>"></script>
