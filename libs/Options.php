@@ -23,6 +23,10 @@ function themeConfig($form) {
 	//logo
 	$logoUrl= new Typecho_Widget_Helper_Form_Element_Text('logoUr1', NULL, NULL, _t('<h2>自定义</h2>LOGO'), _t('请填写 LOGO 在线链接, 留空则调用本地资源。本地路径/usr/themes/ZERO/images/favicon.png'));
     $form->addInput($logoUrl);
+	  
+    //文章置顶
+    $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,NULL, _t('文章置顶'), _t('置顶的文章cid，按照排序输入, 请以半角逗号或空格分隔'));
+    $form->addInput($sticky);
 
     //font
 	$font = new Typecho_Widget_Helper_Form_Element_Select('font',array('0'=>'关闭','1'=>'开启'),'1','特殊字体 是否开启','显示在顶部底部，会占用约4.3m资源，字体有版权不能商用，除非有授权');
