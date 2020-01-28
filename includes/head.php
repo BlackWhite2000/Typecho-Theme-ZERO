@@ -71,7 +71,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/tomorrow-night.css'); ?>">
 
 <!-- 基本样式 -->
-<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/ZERO.css?v=1.0.0'); ?>">
+<?php $ver = themeVersion(); ?>
+<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/ZERO.css?v='. $ver .''); ?>">
 
 
 
