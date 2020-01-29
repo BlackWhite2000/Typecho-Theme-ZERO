@@ -1,7 +1,7 @@
 <?php if($this->options->rewardinstall && $this->options->rewardinstall=1): ?>
 <?php else: ?>
 <?php if($this->options->reward && $this->options->reward=1): ?>
- <div style="margin: 18px 0 10px 0; width: 100%; font-size:16px; text-align: center;">
+ <div style="margin: 34px 0 0 0; width: 100%; font-size:16px; text-align: center;">
     <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
     </button>
@@ -22,7 +22,7 @@
     </div>
 </div>
 <?php else: ?>
-   <div style="margin: 18px 0 10px 0; width: 100%; font-size:16px; text-align: center;">
+   <div style="margin: 34px 0 0 0; width: 100%; font-size:16px; text-align: center;">
     <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
     </button>
