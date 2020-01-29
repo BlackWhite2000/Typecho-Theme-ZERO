@@ -359,16 +359,16 @@ header{box-shadow: 0px 60px 60px #181818;
 	transition: all .2s;
 	z-index: 1000;}
     
-@media (min-width: 1200px){
+@media screen and (max-width: 1200px){
 .search-form input {
     width: 550px;
 }
 }
-@media (min-width: 992px){
+@media screen and (max-width: 992px){
 .search-form input {
     width: 400px;
 }}
-@media (min-width: 768px){
+@media screen and (max-width: 768px){
 .search-form input {
     width: 350px;
 }
@@ -377,12 +377,15 @@ header{box-shadow: 0px 60px 60px #181818;
     left: auto;
 }
 }
-
+@media screen and (max-width: 410px){
+.search-form input {
+    width: 260px;
+}}
 .search-form input {
     border: 1px solid #bababa;
     padding: 10px 25px;
     border-radius: 80px; 
-    width: 400px;
+   
 }
 
 .search-form button  {
@@ -402,8 +405,8 @@ header{box-shadow: 0px 60px 60px #181818;
 }
 
 .search-form button {
-    padding: 10px 15px;
-    padding-top: 5px;
+
+
     background: rgba(0,0,0,0);
     border: none;
     margin-left: -75px;
@@ -784,11 +787,15 @@ box-shadow: 10px -10px 40px -15px #000 inset, -10px -10px 40px -15px #000 inset;
     color: #2bf;
     font-weight: bold;
 }
+/**代码**/
 code {
-  
-    color: #333;
-    background-color: #2bf;
-    border-radius: 2px;
+    color: #2bf;
+    background-color: transparent;
+    border-radius: 0;
+    font-weight: bolder;
+}
+p code {
+    border-bottom: 1px solid;
 }
 /**=========================================
 ==============   打赏   ===============
