@@ -6,7 +6,7 @@
  * 
  * @package     Typecho-Theme-ZERO
  * @author      BlackWhite
- * @version     1.0.3
+ * @version     1.0.4
  * @link        https://www.bwxyz.top
  */
  /** 文章置顶 */
