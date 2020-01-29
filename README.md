@@ -32,12 +32,12 @@
 
 # 常见问题（请务必仔细阅读）
 <details><summary>关于代码块</summary><br>
-使用代码块时候请按照以下格式来
- ```语言
- ```
-如 
- ```css
- ```
+使用代码块时候请按照以下格式来<br>
+ ```语言<br>
+ ```<br>
+如 <br>
+ ```css<br>
+ ```<br>
 </details>
 
 <details><summary>添加归档页面</summary><br>
