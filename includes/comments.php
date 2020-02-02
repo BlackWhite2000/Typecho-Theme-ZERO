@@ -29,7 +29,7 @@ function threadedComments($comments, $options)
   ?>">
     <div id="<?php $comments->theId(); ?>">
       <div class="comments-body">
-        <?php $avatar = 'https://secure.gravatar.com/avatar/' . md5(strtolower($comments->mail)) . '?s=80&r=X&d='; ?>
+        <?php $avatar = '//sdn.geekzu.org/avatar/' . md5(strtolower($comments->mail)) . '?s=80&r=X&d='; ?>
         <img class="avatar" src="<?php echo $avatar ?>" alt="<?php echo $comments->author; ?>"/>
         <div class="line"></div>
         <div class="comment_main">
@@ -39,9 +39,12 @@ function threadedComments($comments, $options)
               class="comment_reply comment-form-display"><i class="fa fa-reply" aria-hidden="true" name="回复"><?php $comments->reply() ?></i></span>
           </div>
           <div class="comment_content">
-          <?php $comments->content(); ?>
+             <?php
+                $cos = preg_replace('#\@\((.*?)\)#','<img src="'.$GLOBALS['theme_url'].'/usr/themes/ZERO/images/OwO/paopao/$1.png" class="biaoqing">',$comments->content);
+                echo $cos;
+              ?>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -83,19 +86,13 @@ function threadedComments($comments, $options)
     	</div>
             <?php endif; ?>
           
-    		<p class="form-textarea">
-              
-                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" placeholder="<?php _e('欢迎一起交流~ 评论时候可能会出现短暂的加载，请不要频繁的刷评论~'); ?>" required ><?php $this->remember('text'); ?></textarea>
-            </p>
-    	
-    			<p>	
-                <button type="submit" class="submit"><?php _e('提交评论'); ?></button></p>
-               
-         	<p class="cancel-comment-reply"> 
-        <?php $comments->cancelReply(); ?>
-        </p>
+    		<p class="form-textarea"><textarea rows="8" cols="50" name="text" id="textarea" class="textarea OwO-textarea" placeholder="<?php _e('欢迎一起交流~ 评论时候可能会出现短暂的加载，请不要频繁的刷评论~'); ?>" required ><?php $this->remember('text'); ?></textarea></p>
+    		<div class="form-0w0 clear">  <div class="OwO-logo" onclick="OwO_show()">    <a>表情</a>  </div>
+    	   <button type="submit" class="submit"><?php _e('提交评论'); ?></button>
+         	<div class="cancel-comment-reply"><?php $comments->cancelReply(); ?></div>
+         	</div>
+         	   <div id="OwO-container"><?php  $this->need('owo.php'); ?></div>
     	</form>
-    	    
     </div><?php if ($comments->have()): ?>
 
    <?php $comments->listComments(); ?>

@@ -3,15 +3,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 <!-- 开始 pjax-container -->
  <div id="pjax-container">
- 	<div class="loading">
-  <div class="loading2">
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-  </div>
-</div>
-
  <?php if($this->options->search && $this->options->search=1): ?>
   <div class="search ready">
 	    <button class="search-close ready" id="search-close-button"><i class="fa fa-times fa-2x"></i></button>
@@ -24,7 +15,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 	  </div>
 <?php else: ?>
 <?php endif; ?>
-	  
  	 <div class="mobile-menu ready">
 	    <button class="mobile-menu-close ready"><i class="fa fa-times fa-2x"></i></button>
 	    <div class="mobile-menu-title">

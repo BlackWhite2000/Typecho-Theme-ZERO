@@ -1,7 +1,7 @@
 <?php
 function themeConfig($form) {
 	$ver = themeVersion();
-        $themeDir = "/usr/themes/ZERO/";
+    $themeDir = "/usr/themes/ZERO/";
 	echo '<div class="ZERO">
 	<h1 style="margin: 1em 0px -0.4em 0;">ZERO 主题设置面板</h1>
 	<p>欢迎使用 ZERO 主题，目前版本是：'. $ver .' <br>
@@ -16,6 +16,7 @@ function themeConfig($form) {
 	 <p>博客还有其他一些代码都是通过学习参考了网上很多大佬来的。</p>
 	 <p>建议导航栏页面总共不要超过5-6个，太多会挤，在未来我会考虑下级菜单的应用。</p>
 	 <p>考虑到我一直是用笔记本搭建的，对于大屏幕可能没有适配好尺寸，如果遇到了请跟我说。</p>
+	 <p>对于二次开发，需要修改css、js的话建议另外新建文件来进行修改。</p>
 	 <h2>如果你想支持我，我当然会非常开心~</h2>
 	<div><img src="../usr/themes/ZERO/images/jz/alipay.jpg" style="width: 20%;" alt="支付宝">支付宝<img src="../usr/themes/ZERO/images/jz/wechat.png" style="width: 20%;" alt="微信">微信</div>
 	<?php
@@ -23,7 +24,11 @@ function themeConfig($form) {
 	//logo
 	$logoUrl= new Typecho_Widget_Helper_Form_Element_Text('logoUr1', NULL, NULL, _t('<h2>自定义</h2>LOGO'), _t('请填写 LOGO 在线链接, 留空则调用本地资源。本地路径/usr/themes/ZERO/images/favicon.png'));
     $form->addInput($logoUrl);
-	  
+    
+    //author
+	$authorName= new Typecho_Widget_Helper_Form_Element_Text('authorName', NULL, NULL, _t('站长名'), _t('评论区用来区分站长与游客的牌子，不填写默认显示“博主”'));
+    $form->addInput($authorName);
+    
     //文章置顶
     $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,NULL, _t('文章置顶'), _t('置顶的文章cid，按照排序输入, 请以半角逗号或空格分隔'));
     $form->addInput($sticky);

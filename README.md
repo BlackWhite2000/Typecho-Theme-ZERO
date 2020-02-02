@@ -29,6 +29,7 @@
 - 关于博客框架：框架采用了 [typecho-theme-dev-framework](https://github.com/AlanDecode/typecho-theme-dev-framework)。
 - 建议导航栏页面总共不要超过5-6个，太多会挤，在未来我会考虑下级菜单的应用。
 - 考虑到我一直是用笔记本搭建的，对于大屏幕可能没有适配好尺寸，如果遇到了请跟我说。
+- 对于二次开发，需要修改css、js的话建议另外新建文件来进行修改。
 
 # 常见问题（请务必仔细阅读）
 <details><summary>关于代码块</summary><br>

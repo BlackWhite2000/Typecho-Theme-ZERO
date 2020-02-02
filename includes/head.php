@@ -23,26 +23,35 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 <title><?php Contents::title($this); ?></title>
 <meta name="author" content="<?php $this->author(); ?>" />
-<meta name="description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
+<meta name="description" content="<?php if($description != '') echo $description; else echo $this->fields->excerpt; ?>" />
 <?php if (($this->options->logoUr1) == ''): ?>
-<meta itemprop="image" content="/usr/themes/ZERO/images/favicon.png" />
+<meta itemprop="image" content="<?php $this->options->siteUrl(); ?>usr/themes/ZERO/images/favicon.png" />
 <?php else: ?>
 <meta itemprop="image" content="<?php $this->options->logoUr1(); ?>" />
 <?php endif; ?>
 <meta property="og:title" content="<?php Contents::title($this); ?>" />
-<meta property="og:description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
+<meta property="og:description" content="<?php if($description != '') echo $description; else echo $this->fields->excerpt; ?>" />
 <meta property="og:site_name" content="<?php Helper::options()->title(); ?>" />
 <meta property="og:type" content="<?php if($this->is('post') || $this->is('page')) echo 'article'; else echo 'website'; ?>" />
 <meta property="og:url" content="<?php $this->permalink(); ?>" />
-<meta property="og:image" content="<?php echo $banner; ?>" />
+<meta property="og:image" <?php if($this->is('post')||$this->is('page')): ?> content="<?php $this->fields->banner(); ?>"
+<?php else: ?>
+<?php if (($this->options->logoUr1) == ''): ?>content="<?php $this->options->siteUrl(); ?>usr/themes/ZERO/images/favicon.png" />
+<?php else: ?>content="<?php $this->options->logoUr1(); ?>" />
+<?php endif; ?><?php endif; ?>
 <meta property="article:published_time" content="<?php echo date('c', $this->created); ?>" />
 <meta property="article:modified_time" content="<?php echo date('c', $this->modified); ?>" />
 <meta name="twitter:title" content="<?php Contents::title($this); ?>" />
-<meta name="twitter:description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
+<meta name="twitter:description" content="<?php if($description != '') echo $description; else echo $this->fields->excerpt; ?>" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content<?php echo $banner; ?>" />
+<meta name="twitter:image" <?php if($this->is('post')||$this->is('page')): ?>
+content="<?php $this->fields->banner(); ?>"
+<?php else: ?>
+<?php if (($this->options->logoUr1) == ''): ?>content="<?php $this->options->siteUrl(); ?>usr/themes/ZERO/images/favicon.png" />
+<?php else: ?>content="<?php $this->options->logoUr1(); ?>" />
+<?php endif; ?><?php endif; ?>
 <?php if (($this->options->logoUr1) == ''): ?>
-<link rel="icon" type="image/png" href="/usr/themes/ZERO/images/favicon.png" />
+<link rel="icon" type="image/png" href="<?php $this->options->siteUrl(); ?>usr/themes/ZERO/images/favicon.png" />
 <?php else: ?>
 <link rel="icon" type="image/png" href="<?php $this->options->logoUr1(); ?>" />
 <?php endif; ?>
@@ -70,19 +79,20 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <!-- 代码高亮 -->
 <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/tomorrow-night.css'); ?>">
 
+<!-- 0w0 -->
+<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/OwO.min.css'); ?>">
+
 <!-- 基本样式 -->
 <?php $ver = themeVersion(); ?>
 <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/ZERO.css?v='. $ver .''); ?>">
 
-
-
 <style><?php $this->options->cssEcho(); ?></style>
 <?php if($this->options->font && $this->options->font!=0) :?>
-<style>@font-face{font-display: swap;font-family: 'Zpix';src: url('/usr/themes/ZERO/fonts/Zpix.ttf');}
-@font-face{font-display: swap;font-family: 'Bender';src: url('/usr/themes/ZERO/fonts/Bender.ttf');}
+<style>@font-face{font-display: swap;font-family: 'Zpix';src: url('https://cdn.yyvhc.com/font/Zpix.ttf');}
+@font-face{font-display: swap;font-family: 'Bender';src: url('https://cdn.yyvhc.com/font/Bender.ttf');}
 .logo,.pages,.nav-header,.nav-item,footer p,.page-navigator li a,.post-404 h1,.post-404 h3,.post-404 p,.post-404 a{font-family: 'Zpix';}
 .posts-date{font-family: 'Bender';font-weight:bold;}</style><?php endif; ?>
-
+<?php if (($this->options->authorName) == ''): ?><style>.comment_meta > .comment-by-author::before {content: "博主";}</style><?php else: ?><style>.comment_meta > .comment-by-author::before {content: "<?php $this->options->authorName(); ?>";}</style><?php endif; ?>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

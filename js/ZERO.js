@@ -31,6 +31,7 @@ $(function(){
 });
 //lazyload
 $(function() {$("img.lazy").lazyload({effect: "fadeIn", threshold: 2000});});
+
 //友链随机排序
 !function(){var a=$('.dalao >.link-box'),b=$('.dalao > .link-box > .link-box-area').toArray();while(b.length)a.prepend(b.splice(~~(Math.random()*b.length),1)[0]);}()
 //返回顶部 源自https://qqdie.com/archives/typecho-to-return-to-the-top-of-the-plug-in-i-first-ran-and-eggs.html
@@ -65,3 +66,26 @@ $(function(){
 		$('#go-top .uc-2vm-pop').addClass('dn');
 	});
 });
+
+//0w0
+Smilies = {
+    dom: function(id) {
+        return document.getElementById(id);
+    },
+    grin: function(tag) {
+        tag = ' ' + tag + ' ';
+        myField = this.dom("textarea");
+        document.selection ? (myField.focus(), sel = document.selection.createRange(), sel.text = tag, myField.focus()) : this.insertTag(tag);
+    },
+    insertTag: function(tag) {
+        myField = Smilies.dom("textarea");
+        myField.selectionStart || myField.selectionStart == "0" ? (startPos = myField.selectionStart, endPos = myField.selectionEnd, cursorPos = startPos, myField.value = myField.value.substring(0, startPos) + tag + myField.value.substring(endPos, myField.value.length), cursorPos += tag.length, myField.focus(), myField.selectionStart = cursorPos, myField.selectionEnd = cursorPos) : (myField.value += tag, myField.focus());
+    }
+}
+function OwO_show(){
+	if($("#OwO-container").css("display")=='none'){
+		 $("#OwO-container").slideDown();
+	}else{
+		 $("#OwO-container").slideUp();
+	 }
+}
