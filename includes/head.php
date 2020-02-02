@@ -88,8 +88,8 @@ content="<?php $this->fields->banner(); ?>"
 
 <style><?php $this->options->cssEcho(); ?></style>
 <?php if($this->options->font && $this->options->font!=0) :?>
-<style>@font-face{font-display: swap;font-family: 'Zpix';src: url('https://cdn.yyvhc.com/font/Zpix.ttf');}
-@font-face{font-display: swap;font-family: 'Bender';src: url('https://cdn.yyvhc.com/font/Bender.ttf');}
+<style>@font-face{font-display: swap;font-family: 'Zpix';src: url('/usr/themes/ZERO/fonts/Zpix.ttf');}
+@font-face{font-display: swap;font-family: 'Bender';src: url('/usr/themes/ZERO/fonts/Bender.ttf');}
 .logo,.pages,.nav-header,.nav-item,footer p,.page-navigator li a,.post-404 h1,.post-404 h3,.post-404 p,.post-404 a{font-family: 'Zpix';}
 .posts-date{font-family: 'Bender';font-weight:bold;}</style><?php endif; ?>
 <?php if (($this->options->authorName) == ''): ?><style>.comment_meta > .comment-by-author::before {content: "博主";}</style><?php else: ?><style>.comment_meta > .comment-by-author::before {content: "<?php $this->options->authorName(); ?>";}</style><?php endif; ?>
