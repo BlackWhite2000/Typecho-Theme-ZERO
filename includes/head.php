@@ -2,7 +2,10 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<?php if (($this->options->htmllang) == ''): ?>
+<html lang="zh-Hans"><?php else: ?>
+<html lang="<?php $this->options->htmllang(); ?>"><?php endif; ?>
+
 <head>
 <meta charset="<?php $this->options->charset(); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,12 +89,25 @@ content="<?php $this->fields->banner(); ?>"
 <?php $ver = themeVersion(); ?>
 <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/ZERO.css?v='. $ver .''); ?>">
 
-<style><?php $this->options->cssEcho(); ?></style>
-<?php if($this->options->font && $this->options->font!=0) :?>
+<?php if($this->options->zero && $this->options->zero=1): ?>
+  <!-- two -->
+<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/two/two.css'); ?>">
+<style>@font-face{font-display: swap;font-family: 'SourceHanSans';src: url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900');}
+@font-face{font-display: swap;font-family: 'SourceHanSerif';src: url('https://fonts.googleapis.com/css?family=Noto+Serif+SC:200,300,400,500,600,700,900');}</style>
+<?php else: ?>
+    <?php if($this->options->font && $this->options->font!=0) :?>
 <style>@font-face{font-display: swap;font-family: 'Zpix';src: url('/usr/themes/ZERO/fonts/Zpix.ttf');}
 @font-face{font-display: swap;font-family: 'Bender';src: url('/usr/themes/ZERO/fonts/Bender.ttf');}
 .logo,.pages,.nav-header,.nav-item,footer p,.page-navigator li a,.post-404 h1,.post-404 h3,.post-404 p,.post-404 a{font-family: 'Zpix';}
 .posts-date{font-family: 'Bender';font-weight:bold;}</style><?php endif; ?>
+
+<?php endif; ?>
+
+
+
+
+<style><?php $this->options->cssEcho(); ?></style>
+
 <?php if (($this->options->authorName) == ''): ?><style>.comment_meta > .comment-by-author::before {content: "博主";}</style><?php else: ?><style>.comment_meta > .comment-by-author::before {content: "<?php $this->options->authorName(); ?>";}</style><?php endif; ?>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -101,4 +117,4 @@ content="<?php $this->fields->banner(); ?>"
 <![endif]-->
 </head>
 
-<body class="body bg-overlay">
+<body class="body bg-overlay "><?php $this->options->bodytop(); ?>

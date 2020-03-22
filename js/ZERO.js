@@ -1,5 +1,5 @@
 //主题信息 请勿删除
-setTimeout(function () {console.log(" %c Theme ZERO %c By BlackWhite %c https://www.bwxyz.top/posts/32/ ","color: #fadfa3; background: #333; padding:8px;","color: #111; background: #fadfa3; padding:8px;","background: #efefef; padding:8px;");}, 8000);
+setTimeout(function () {console.log(" %c Theme ZERO %c By BlackWhite %c https://www.bwxyz.top/posts/48 ","color: #fadfa3; background: #333; padding:8px;","color: #111; background: #fadfa3; padding:8px;","background: #efefef; padding:8px;");}, 8000);
 //导航开关
 $(function(){
   $(window).ready(function(){

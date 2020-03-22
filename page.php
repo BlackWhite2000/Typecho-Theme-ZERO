@@ -9,7 +9,10 @@ $this->need('includes/header.php');
  <!-- <title hidden>
         <?php Contents::title($this); ?>
     </title>-->
-    
+    <?php if($this->options->zero && $this->options->zero=1): ?>
+   <div class="height-80px two-mobile-display-none"></div>
+<?php else: ?>
+<?php endif; ?>
   <div class="wrapper container">
         <div class="contents-wrap"> <!--start .contents-wrap-->
         

@@ -3,18 +3,23 @@
 <img src="screenshot.png" alt="banner">
 
 # 特性
->关于ZERO [https://www.bwxyz.top/posts/32/](https://www.bwxyz.top/posts/32/)
+>关于ZERO [https://www.bwxyz.top/posts/48/](https://www.bwxyz.top/posts/48/)
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
+- 一主题双模板
 - 图片懒加载
 - 自带归档页面
 - 自带友链解析
 - 自带b站视频解析
+- 评论区表情功能
+- 支持打赏二维码
+- 文章直接跳转外链
 - 后台高级设置功能
 - 自认为很好看的博客（咳咳）
 
 # 演示站点
-[https://www.bwxyz.top](https://www.bwxyz.top)
+[one模板](http://zero-one.yyvhc.com/)
+[two模板](http://zero-two.yyvhc.com/)
 
 # 使用
 1. 下载**最新的 [Release](https://github.com/BlackWhite2000/Typecho-Theme-ZERO/releases)**
@@ -27,7 +32,8 @@
 - 关于代码高亮：代码高亮是用了 [CodePrettify](https://github.com/Xcnte/Code-Prettify-for-typecho) 插件，主题本身已内嵌，所以无需下载插件。
 - 关于返回顶部：返回顶部是用了 [gotop](https://qqdie.com/archives/typecho-to-return-to-the-top-of-the-plug-in-i-first-ran-and-eggs.html) 插件，主题本身已内嵌，所以无需下载插件。
 - 关于博客框架：框架采用了 [typecho-theme-dev-framework](https://github.com/AlanDecode/typecho-theme-dev-framework)。
-- 建议导航栏页面总共不要超过5-6个，太多会挤，在未来我会考虑下级菜单的应用。
+- 建议导航栏页面总共不要超过5-6个，太多会挤。
+- <span style="color:red;">two模板导航栏字数不能超过5个，太多会导致换行或者看不到。<span>
 - 考虑到我一直是用笔记本搭建的，对于大屏幕可能没有适配好尺寸，如果遇到了请跟我说。
 - 对于二次开发，需要修改css、js的话建议另外新建文件来进行修改。
 

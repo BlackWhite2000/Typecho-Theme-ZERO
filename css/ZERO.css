@@ -2,7 +2,7 @@
 /**=========================================
 ==============   全局   ===============
 ============================================**/
-* {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;list-style: none;quotes: none;}
+* {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;quotes: none;}
 p,
 b,
 h1,
@@ -72,6 +72,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 	padding-top:100px;
 	border-radius:4px
 }
+.height-10px{height:10px;}.height-20px{height:20px;}.height-30px{height:30px;}.height-40px{height:40px;}.height-50px{height:50px;}.height-60px{height:60px;}.height-70px{height:70px;}.height-80px{height:80px;}
 /**=========================================
 ==============   归档   ===============
 ============================================**/
@@ -743,14 +744,14 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,.1);
     opacity: 1;
     border-radius: 10px;
-     -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+     -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 .bw-over-black:hover{opacity:0;}
@@ -819,21 +820,7 @@ box-shadow: 10px -10px 40px -15px #000 inset, -10px -10px 40px -15px #000 inset;
   .post-body {padding:24px 14px 14px 14px;}
   .headline{padding:0 0 5px 0; margin: 0 auto 15px auto;}
 }
-.post-body h2:before,.post-body h3:before,.post-body h4:before,.post-body h5:before,.post-body h6:before {
-    content: '# ';
-    color: #2bf;
-    font-weight: bold;
-}
-/**代码**/
-code {
-    color: #2bf;
-    background-color: transparent;
-    border-radius: 0;
-    font-weight: bolder;
-}
-p code {
-    border-bottom: 1px solid;
-}
+
 /**=========================================
 ==============   打赏   ===============
 ============================================**/
@@ -854,10 +841,10 @@ p code {
 ==============   底部   ===============
 ============================================**/
 
-footer{font-size: 18px;font-weight: bold;color: black;    box-shadow: 0px -20px 60px #181818;
+.footer{font-size: 18px;font-weight: bold;color: black;    box-shadow: 0px -20px 60px #181818;
     background: #181818;}
-footer p{color:white;}
-footer a{ color:#2bf;}
+.footer p{color:white;}
+.footer a{ color:#2bf;}
 .footer-float-left{float: left;}
 .footer-float-right{float: right;}
 .footer-height-50px{height: 50px;}
@@ -974,3 +961,48 @@ footer a{ color:#2bf;}
     top: 0
 }
 
+/**=========================================
+==============   md   ===============
+============================================**/
+
+.post{    color: #d9d9d9;    line-height: 30px; letter-spacing: 2px;}
+
+code {
+    color: #2bf;
+    background-color: transparent;
+    border-radius: 0;
+    font-weight: bolder;
+}
+p code {
+    border-bottom: 1px solid;
+}
+pre{    background: #2d2d2d;    color: #ccc;}
+
+.post-body h2:before,.post-body h3:before,.post-body h4:before,.post-body h5:before,.post-body h6:before {
+    content: '# ';
+    color: #2bf;
+    font-weight: bold;
+}
+.ul-list, .ul-list ul, .ul-list ol ,.two-nav{list-style:none;}
+.post ul,.post ol{    padding-left: 30px;}
+
+.post table {
+    border: 1px solid #ddd;
+    width: 100%;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.post table th {
+    background: #333;
+}
+.post table th, .post table td {
+    padding: 5px 10px;
+    border: 1px solid #eee; text-align: center;}
+    
+    .comment-list ol,.comment-list li{list-style:none;}
+    

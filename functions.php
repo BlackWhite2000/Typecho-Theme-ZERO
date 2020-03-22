@@ -51,9 +51,12 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $excerpt = new Typecho_Widget_Helper_Form_Element_Textarea('excerpt', NULL, NULL, '文章摘要', '输入自定义摘要。留空自动从文章截取。');
     $excerpt->input->setAttribute('class', 'w-100');
     $layout->addItem($excerpt);
-    $thumb = new Typecho_Widget_Helper_Form_Element_Textarea('banner', NULL, NULL, '文章主图', '留空自动从本地随机调用图片');
+    $thumb = new Typecho_Widget_Helper_Form_Element_Text('banner', NULL, NULL, '文章主图', '留空自动从本地随机调用图片');
     $thumb->input->setAttribute('class', 'w-100');
     $layout->addItem($thumb);
+    $customLink = new Typecho_Widget_Helper_Form_Element_Text('customLink', NULL, NULL, '外链跳转', '输入要跳转的外链。');
+    $customLink->input->setAttribute('class', 'w-100');
+    $layout->addItem($customLink);
     $copy_author = new Typecho_Widget_Helper_Form_Element_Text('copy_author', NULL, NULL, '转载作者', '文章转载自哪个网站，若为原创则留空');
     $copy_author->input->setAttribute('class', 'w-100');
     $layout->addItem($copy_author);
@@ -89,4 +92,28 @@ $thumb = $attach->url;
 $thumb = $imgurl;
 }
 return $thumb;
+}
+
+
+function isqq($email)
+{
+    if ($email) {
+        if (strpos($email, "@qq.com") !== false) {
+            $email = str_replace('@qq.com', '', $email);
+            if(is_numeric($email)){
+            echo "//q1.qlogo.cn/g?b=qq&nk=" . $email . "&";
+            }else{
+                $mmail = $email.'@qq.com';
+                $email = md5($mmail);
+                echo "//cdn.v2ex.com/gravatar/" . $email . "?";
+            }
+            
+        } else {
+            $email = md5($email);
+            echo "//cdn.v2ex.com/gravatar/" . $email . "?";
+        }
+    } else {
+        echo "//cdn.v2ex.com/gravatar/null?";
+     
+    }
 }

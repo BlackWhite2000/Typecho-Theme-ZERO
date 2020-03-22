@@ -7,7 +7,10 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
 $this->need('includes/header.php');
-?>
+?>   <?php if($this->options->zero && $this->options->zero=1): ?>
+   <div class="height-80px two-mobile-display-none"></div>
+<?php else: ?>
+<?php endif; ?>
     <main class="wrapper container">
 	  <div class="contents-wrap post-body">
 	    <div class="">

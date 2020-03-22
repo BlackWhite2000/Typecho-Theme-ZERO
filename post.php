@@ -5,12 +5,16 @@ $this->need('includes/head.php');
 $this->need('includes/header.php');
 
 ?>
+   <?php if($this->options->zero && $this->options->zero=1): ?>
+   <div class="height-80px two-mobile-display-none"></div>
+<?php else: ?>
 
+<?php endif; ?>
 <!--页面主要内容-->
     <!-- <title hidden>
         <?php Contents::title($this); ?>
     </title>-->
-    
+   
   <div class="wrapper container">
         <div class="contents-wrap post-body"> <!--start .contents-wrap-->
             <section id="post" class="float-up">
