@@ -841,7 +841,7 @@ box-shadow: 10px -10px 40px -15px #000 inset, -10px -10px 40px -15px #000 inset;
 ==============   底部   ===============
 ============================================**/
 
-.footer{font-size: 18px;font-weight: bold;color: black;    box-shadow: 0px -20px 60px #181818;
+.footer{font-weight: bold;color: black;    box-shadow: 0px -20px 60px #181818;
     background: #181818;}
 .footer p{color:white;}
 .footer a{ color:#2bf;}
