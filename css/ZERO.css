@@ -826,7 +826,7 @@ box-shadow: 10px -10px 40px -15px #000 inset, -10px -10px 40px -15px #000 inset;
     background-color: #333;
     border-radius: 5px;
     border: 1px dashed #888888;
-    padding: 10px 10px 10px 40px;
+    padding: 10px;
     position: relative;
 }
 /**=========================================
