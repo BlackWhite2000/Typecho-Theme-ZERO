@@ -42,7 +42,7 @@
 - 关于返回顶部：返回顶部是用了 [gotop](https://qqdie.com/archives/typecho-to-return-to-the-top-of-the-plug-in-i-first-ran-and-eggs.html) 插件，主题本身已内嵌，所以无需下载插件。
 - 关于博客框架：框架采用了 [typecho-theme-dev-framework](https://github.com/AlanDecode/typecho-theme-dev-framework)。
 - 建议导航栏页面总共不要超过5-6个，太多会挤。
-- <span style="color:red;">two模板导航栏字数不能超过5个，太多会导致换行或者看不到。<span>
+- <span style="color:red;">two模板导航栏字数不能超过6-7个，太多会导致换行或者看不到。<span>
 - 考虑到我一直是用笔记本搭建的，对于大屏幕可能没有适配好尺寸，如果遇到了请跟我说。
 - 对于二次开发，需要修改css、js的话建议另外新建文件来进行修改。
 
