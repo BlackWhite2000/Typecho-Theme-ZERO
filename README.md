@@ -2,24 +2,33 @@
 一款深灰色的主题，也是我的第一款主题
 <img src="screenshot.png" alt="banner">
 
-# 特性
+# 特色
 >关于ZERO [https://www.bwxyz.top/posts/48/](https://www.bwxyz.top/posts/48/)
+- 一主题双模板
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
-- 一主题双模板
-- 图片懒加载
-- 自带归档页面
-- 自带友链解析
-- 自带b站视频解析
-- 评论区表情功能
-- 支持打赏二维码
-- 文章直接跳转外链
-- 后台高级设置功能
-- 自认为很好看的博客（咳咳）
+
+- 功能
+  - 代码高亮
+  - 图片懒加载
+  - 自带归档页面
+  - 评论区表情功能
+  - 自带b站视频解析
+  - 自带友情链接功能
+  - 文章直接跳转外链
+  - 评论回复可见功能
+  - 支持打赏二维码(可自定义
+
+- 管理
+  - 后台高级自定义设置功能
+
 
 # 演示站点
 [one模板](http://zero-one.yyvhc.com/)
 [two模板](http://zero-two.yyvhc.com/)
+
+# 主站点
+[www.bwxyz.top](https://www.bwxyz.top/)
 
 # 使用
 1. 下载**最新的 [Release](https://github.com/BlackWhite2000/Typecho-Theme-ZERO/releases)**
@@ -45,6 +54,16 @@
 如 <br>
  ```css<br>
  ```<br>
+</details>
+
+<details><summary>添加回复可见</summary><br>
+
+```
+{hide}
+隐藏的内容
+{/hide}
+```
+
 </details>
 
 <details><summary>添加归档页面</summary><br>
@@ -110,7 +129,7 @@
 </details>
 
 # 遇到问题
-如果遇到使用上的问题，可以[留言](https://www.bwxyz.top/posts/32)，但当然不代表我完全都会，因为我也只是会点css的业余人士而已。<br>
+如果遇到使用上的问题，可以[留言](https://www.bwxyz.top/posts/48)，但当然不代表我完全都会，因为我也只是会点css的业余人士而已。<br>
 如果你打算二次开发，请具备基本的css基础，同时对于二次开发我可能无法给你太多帮助，理由同上。
 
 # 关于更新

@@ -820,7 +820,15 @@ box-shadow: 10px -10px 40px -15px #000 inset, -10px -10px 40px -15px #000 inset;
   .post-body {padding:24px 14px 14px 14px;}
   .headline{padding:0 0 5px 0; margin: 0 auto 15px auto;}
 }
-
+    
+.reply2view {
+    text-align: center;
+    background-color: #333;
+    border-radius: 5px;
+    border: 1px dashed #888888;
+    padding: 10px 10px 10px 40px;
+    position: relative;
+}
 /**=========================================
 ==============   打赏   ===============
 ============================================**/
@@ -841,7 +849,7 @@ box-shadow: 10px -10px 40px -15px #000 inset, -10px -10px 40px -15px #000 inset;
 ==============   底部   ===============
 ============================================**/
 
-.footer{font-weight: bold;color: black;    box-shadow: 0px -20px 60px #181818;
+.footer{font-size: 18px;font-weight: bold;color: black;    box-shadow: 0px -20px 60px #181818;
     background: #181818;}
 .footer p{color:white;}
 .footer a{ color:#2bf;}
@@ -1005,4 +1013,3 @@ th {
     border: 1px solid #eee; text-align: center;}
     
     .comment-list ol,.comment-list li{list-style:none;}
-    

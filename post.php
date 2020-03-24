@@ -30,17 +30,17 @@ $this->need('includes/header.php');
           <?php endif; ?>
                
                     <div itemprop="articleBody" class="full">
-                        <?php $this->content(); ?>
+                    <?php echo parse_content($this->content,$this->cid,$this->remember('mail',true),$this->user->hasLogin()); ?>
                     </div>
                 </article>
             </section>
-  <p class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, '<span>此文章还未分配标签</span>'); ?></p>
+  <p class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, '<span>此文章还未分配标签</span>'); ?><div class="clearfloat"></div></p>
                 <!--打赏-->
                 <?php $this->need('includes/reward.php'); ?>
-   
+                <?php $this->options->diypost1(); ?>
                 <!--版权信息-->
                 <?php $this->need('includes/copyright.php'); ?>
-
+                <?php $this->options->diypost2(); ?>
                 <!--评论区-->
                 <?php $this->need('includes/comments.php'); ?>
                 

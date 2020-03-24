@@ -34,7 +34,7 @@ body{font-family: SourceHanSans;}
 .two-index-nav{height: 50px;box-sizing: border-box;z-index:100;position: relative;
     left: -50%;}
 .two-nav-frame{width: 1200px;margin: 0 auto;}
-.two-nav-frame-line{float: left;position: relative;display: block;outline: none;cursor: pointer;width: 100px;line-height: 50px;text-align: center;font-weight: 200;}
+.two-nav-frame-line{float: left;position: relative;display: block;outline: none;cursor: pointer;width: 100px;line-height: 46px;text-align: center;font-weight: 200;}
 .two-nav-frame-line-center{opacity: 0;height: 0;position: absolute;overflow: hidden;width: 100%;transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;/* Firefox 4 */-o-transition: all 0.5s; /* Opera */}
 .two-nav-frame-line-li{width: 100%;font-weight: 100;text-align: center;background:#222;}
 .two-nav-frame-line-li:hover{background: #333;color: white;background: #333;}
@@ -46,9 +46,13 @@ body{font-family: SourceHanSans;}
  .two-posts-archive-title a{color: white; font-size: 24px;text-decoration:none;}
  .page-navigator > li > a{font-size: 14px;}
  .bw-over > a > img{height:220px;}
+ .two-nav-frame-line-li a{font-size:14px;}
 @media screen and (max-width: 992px) {
   .two-mobile-display-none{display:none;}
   .two-mobile-display-block{display:block;}
   .bw-over > a > img{height:240px;}
 
 }
+
+
+

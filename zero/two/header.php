@@ -27,8 +27,23 @@
 		<div class="mobile-menu-item"><a href="<?php Utils::index(''); ?>">首页</a></div>
 		  <?php $this->widget('Widget_Contents_Page_List')
           ->parse('<div class="mobile-menu-item"><a href="{permalink}">{title}</a></div>'); ?>
-          <?php $this->widget('Widget_Metas_Category_List')
-          ->parse('<div class="mobile-menu-item"><a href="{permalink}">{name}</a></div>'); ?>
+  	
+	<?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
+<?php while($categorys->next()): ?>
+<?php if ($categorys->levels === 0): ?>
+<?php $children = $categorys->getAllChildren($categorys->mid); ?>
+<?php if (empty($children)) { ?>
+<div class="mobile-menu-item">
+<a href="<?php $categorys->permalink(); ?>"><?php $categorys->name(); ?></a>
+</div>
+<?php } else { ?>
+
+					<?php foreach ($children as $mid) { ?>
+<?php $child = $categorys->getCategory($mid); ?>
+					<div class="mobile-menu-item">
+					<a href="<?php echo $child['permalink'] ?>" class="dropdown-item <?php if($this->is('category', $mid)): ?>active<?php endif; ?>"><?php echo $child['name']; ?></a>	</div>
+			<?php } ?>
+	<?php } ?><?php endif; ?><?php endwhile; ?>
 		</div></div>
 	  </div>
 	  

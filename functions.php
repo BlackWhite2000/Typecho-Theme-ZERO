@@ -117,3 +117,31 @@ function isqq($email)
      
     }
 }
+function parse_content($content,$cid,$mail,$login){
+    $db = Typecho_Db::get();
+    $sql = $db->select()->from('table.comments')
+    ->where('cid = ?',$cid)
+    ->where('mail = ?', $mail)
+    ->where('status = ?', 'approved')
+    ->limit(1);
+    $result = $db->fetchAll($sql);
+    if($login || $result) {
+        $content = preg_replace("/\{hide\}(.*?)\{\/hide\}/sm",'$1',$content);
+    }
+    else{
+        $content = preg_replace("/\{hide\}(.*?)\{\/hide\}/sm",'<div class="reply2view">您需要<a onclick="window.scrollTo(0, document.documentElement.clientHeight);">回复</a>才能显示此处隐藏内容。</div>',$content);
+    }
+    return $content;
+}
+Typecho_Plugin::factory('Widget_Abstract_Contents')->excerptEx = array('moleft','one');
+Typecho_Plugin::factory('Widget_Abstract_Contents')->contentEx = array('moleft','one');
+class moleft {
+    public static function one($con,$obj,$text)
+    {
+      $text = empty($text)?$con:$text;
+      if(!$obj->is('single')){
+      $text = preg_replace("/\{hide\}(.*?)\{\/hide\}/sm",'此处内容已隐藏',$text);
+      }
+      return $text;
+    }
+}

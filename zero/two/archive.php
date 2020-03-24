@@ -1,9 +1,9 @@
- <div class="height-60px two-mobile-display-none"></div>
+<div class="height-60px two-mobile-display-none"></div>
 <div class="two-diy">
 	  <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
 
 
-<div class="two-posts-description">category<p class="two-posts-title two-posts-archive-title"><?php $this->category(',', true, ''); ?></p><div class="two-pages two-mobile-display-none"><?php $this->pageLink('<i class="fa fa-angle-double-left"></i>'); ?>&nbsp;&nbsp;<?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>&nbsp;/&nbsp;<?php echo ceil($this->getTotal() / $this->parameter->pageSize); ?>&nbsp;&nbsp;<?php $this->pageLink('<i class="fa fa-angle-double-right"></i>','next'); ?></div></div>
+<div class="two-posts-description">category<p class="two-posts-title two-posts-archive-title"><?php $this->archiveTitle(array( 'category'  =>  _t('%s'), 'tag' => _t('%s'),), '', '');?></p><div class="two-pages two-mobile-display-none"><?php $this->pageLink('<i class="fa fa-angle-double-left"></i>'); ?>&nbsp;&nbsp;<?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>&nbsp;/&nbsp;<?php echo ceil($this->getTotal() / $this->parameter->pageSize); ?>&nbsp;&nbsp;<?php $this->pageLink('<i class="fa fa-angle-double-right"></i>','next'); ?></div></div>
 
 
 <div class="posts">

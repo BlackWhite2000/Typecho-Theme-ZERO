@@ -6,7 +6,7 @@
  * 
  * @package     Typecho-Theme-ZERO
  * @author      BlackWhite
- * @version     2.0.1
+ * @version     2.0.2
  * @link        https://www.bwxyz.top
  */
 $sticky = $this->options->sticky;
